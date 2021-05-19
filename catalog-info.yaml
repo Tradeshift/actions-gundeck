@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: actions-gundeck
+  description: |
+    Github action for running Rundeck jobs
+  annotations:
+    github.com/project-slug: Tradeshift/actions-gundeck
+  tags:
+    - typescript
+    - github-action
+spec:
+  type: library
+  owner: developer-productivity
+  lifecycle: production
