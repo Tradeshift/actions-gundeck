@@ -14,7 +14,6 @@ inputs:
   host:
     description: Rundeck host
     required: true
-    default: https://sonar.ts.sv
   job:
     description: Rundeck job
     required: true
@@ -25,11 +24,10 @@ inputs:
     description: Rundeck project
     required: true
   token:
-    description: Sonarqube access token
+    description: Rundeck access token
     required: true
   docker-image:
     description: dockerimage used to run rundeck
-    required: true
     default: eu.gcr.io/tradeshift-public/gundeck-action:1.0.0
 runs:
   using: node16
