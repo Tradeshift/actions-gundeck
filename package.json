@@ -17,12 +17,16 @@
     "type": "git",
     "url": "git+https://github.com/tradeshift/actions-gundeck.git"
   },
-  "keywords": ["actions", "node", "rundeck"],
+  "keywords": [
+    "actions",
+    "node",
+    "rundeck"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.4.0",
-    "@tradeshift/actions-exec": "^1.0.0",
+    "@actions/exec": "^1.1.1",
     "csv-parse": "^4.16.0"
   },
   "devDependencies": {
