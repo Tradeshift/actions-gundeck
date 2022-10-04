@@ -11,7 +11,7 @@ on: [push]
 
 jobs:
   gundeck:
-    runs-on: self-hosted
+    runs-on: [self-hosted,ts-large-x64-docker-large]
     steps:
       - uses: tradeshift/actions-gundeck@v1
         with:
