@@ -47,7 +47,7 @@ runs:
         pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
         SONART_OPTS="-Dsonar.host.url=http://127.0.0.1:9000 -Dsonar.projectKey=${REPONAME} -Dsonar.login=${{ inputs.sonar-token }} -Dsonar.sourceEncoding=UTF-8 -Dsonar.pullrequest.branch=${GITHUB_HEAD_REF} -Dsonar.pullrequest.key=${pull_number} -Dsonar.pullrequest.github.repository=${GITHUB_REPOSITORY} -Dsonar.pullrequest.provider=Github -Dsonar.scm.revision=$(git rev-parse HEAD)"
 
-        echo "::set-output name=opts::$SONART_OPTS"
+        echo "opts=$SONART_OPTS" >> $GITHUB_OUTPUT
 branding:
   icon: "check-square"
   color: "blue"
