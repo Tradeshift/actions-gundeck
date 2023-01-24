@@ -20,7 +20,7 @@ exports.run = void 0;
 const exec_1 = __nccwpck_require__(1514);
 function run(inputs) {
     return __awaiter(this, void 0, void 0, function* () {
-        const res = yield exec_1.getExecOutput('docker', [
+        const res = yield (0, exec_1.getExecOutput)('docker', [
             'run',
             '--rm',
             '-e',
@@ -58,7 +58,11 @@ exports.run = run;
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -115,7 +119,7 @@ function getInputList(name, ignoreComma = false) {
         if (items === '') {
             return res;
         }
-        const parsed = yield sync_1.default(items, {
+        const parsed = yield (0, sync_1.default)(items, {
             columns: false,
             relaxColumnCount: true,
             skipLinesWithEmptyValues: true
@@ -145,7 +149,11 @@ function getInputList(name, ignoreComma = false) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -178,11 +186,11 @@ const gundeck = __importStar(__nccwpck_require__(4748));
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const inputs = yield inputs_1.getInputs();
+            const inputs = yield (0, inputs_1.getInputs)();
             yield gundeck.run(inputs);
         }
         catch (error) {
-            core_1.setFailed(error.message);
+            (0, core_1.setFailed)(error.message);
         }
     });
 }
