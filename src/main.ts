@@ -6,8 +6,8 @@ async function run(): Promise<void> {
   try {
     const inputs = await getInputs();
     await gundeck.run(inputs);
-  } catch (error) {
-    setFailed(error.message);
+  } catch (error: unknown) {
+    setFailed((error as Error).message);
   }
 }
 
