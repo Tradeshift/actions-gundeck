@@ -6,7 +6,7 @@ export async function run(inputs: Inputs): Promise<void> {
     'run',
     '--rm',
     '-e',
-    `HOST=${inputs.host}`,
+    `URL=${inputs.host}`,
     '-e',
     `CA=${inputs.caCert}`,
     '-e',
