@@ -28,7 +28,7 @@ inputs:
     required: true
   docker-image:
     description: dockerimage used to run rundeck
-    default: eu.gcr.io/tradeshift-public/gundeck-action:1.0.0
+    default: 063399264027.dkr.ecr.eu-west-1.amazonaws.com/tradeshift-public/gundeck-action:1.0.0
 runs:
   using: node16
   main: dist/index.js
