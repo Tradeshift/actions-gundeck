@@ -5,5 +5,8 @@
     "topics": [
         "github-action",
         "nodejs"
+    ],
+    "checks": [
+        "build"
     ]
 }
